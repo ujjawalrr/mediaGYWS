@@ -1,0 +1,113 @@
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 80vh;
+}
+.banner .imgBx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.banner .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: 0.5s;
+    background-position: center;
+}
+.banner .imgBx img.active {
+    opacity: 1;
+}
+.controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 40px;
+    width: 80px;
+}
+.controls li {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background: #fff;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.controls li:hover {
+    background: #ffeb3b;
+}
+.controls li:before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-left: 3px solid #111;
+    border-bottom: 3px solid #111;
+    transform: rotate(45deg);
+}
+.controls li:nth-child(2):before {
+    transform: rotate(225deg);
+}
+.contentBx {
+    position: absolute;
+    bottom: 0;
+    max-width: 700px;
+}
+.contentBx div {
+    display: none;
+}
+.contentBx div.active{
+    display: block;
+    padding: 30px;
+    padding-left: 100px;
+    background: rgba(0, 0, 0, 0.2);
+}
+.contentBx div h2 {
+    color: #fff;
+    font-size: 2em;
+}
+.contentBx div h4 {
+    color: #fff;
+    margin: 2px 0px;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+.contentBx div p {
+    color: #fff;
+    font-size: 1.1em;
+}
+.contentBx div a {
+    /* color: #111; */
+    font-size: 1.1em;
+    display: inline-block;
+    padding: 10px 30px;
+    /* background: #fff; */
+    margin-top: 10px;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.carousel-btn {
+    text-transform: uppercase;
+    /* font-size: 0.9rem; */
+    margin: 0.5rem;
+    /* padding: 0.7rem 1.5rem; */
+    color: rgb(53, 58, 65);
+    background-image: linear-gradient(to right, #fec301 0%, #fee180 100%);
+    border: none;
+    box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.3);
+    /* font-weight: 600; */
+    transition-property: linear-gradient;
+    transition-duration: 1s;
+    border-radius: 0.5rem;
+  }
